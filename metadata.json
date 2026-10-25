@@ -1,5 +1,6 @@
 {
-  "study": "Synthetic causal machine benchmark V1",
+  "study": "Synthetic causal machine benchmark V1 (JAX implementation)",
+  "random_backend": "jax.random; three independent split keys for observational U, epsilon_X, epsilon_Y",
   "parameter_values": {
     "speed_from_load": 0.8,
     "speed_effect": 2.0,
