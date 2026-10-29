@@ -1,0 +1,24 @@
+{
+  "research_question": "Bayesian predictive accuracy versus reliability of causal-effect uncertainty",
+  "seed": 20261029,
+  "jax_version": "0.12.0.1",
+  "backend": "cpu",
+  "models": [
+    "speed_only",
+    "adjusted_additive",
+    "adjusted_interaction"
+  ],
+  "num_posterior_samples": 2500,
+  "num_calibration_repetitions": 24,
+  "training_n": 1200,
+  "test_n": 1000,
+  "scm": {
+    "X": "0.8*U+eps_x",
+    "Y": "2*X+1.5*U+0.5*X*U+eps_y"
+  },
+  "outputs": {
+    "figures": 9,
+    "reports": 3
+  },
+  "key_caveat": "Speed-only model does not identify causal effects due to unobserved workload confounding"
+}
