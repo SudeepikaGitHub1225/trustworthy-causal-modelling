@@ -1,0 +1,129 @@
+{
+  "benchmark": "Milestone 1B \u2014 advanced causal identifiability benchmark",
+  "library": "JAX",
+  "jax_version": "0.12.0.1",
+  "jax_device": "cpu:0",
+  "model": "U -> X, U -> Y, X -> Y; proxy W <- U",
+  "design": "fixed scenario parameters, independent JAX keys per config/size/split",
+  "sample_sizes": [
+    500,
+    2000,
+    10000
+  ],
+  "splits": [
+    "train",
+    "validation",
+    "test"
+  ],
+  "configurations": [
+    {
+      "scenario": "S0_baseline",
+      "environment": "A",
+      "mu_u": 0.0,
+      "sigma_u": 1.0,
+      "sigma_x": 1.0,
+      "sigma_w": 0.0,
+      "nonlinear": false
+    },
+    {
+      "scenario": "S1_nonlinear",
+      "environment": "A",
+      "mu_u": 0.0,
+      "sigma_u": 1.0,
+      "sigma_x": 1.0,
+      "sigma_w": 0.0,
+      "nonlinear": true
+    },
+    {
+      "scenario": "S2_shift",
+      "environment": "A",
+      "mu_u": 0.0,
+      "sigma_u": 1.0,
+      "sigma_x": 1.0,
+      "sigma_w": 0.0,
+      "nonlinear": false
+    },
+    {
+      "scenario": "S2_shift",
+      "environment": "B",
+      "mu_u": 2.0,
+      "sigma_u": 1.0,
+      "sigma_x": 1.0,
+      "sigma_w": 0.0,
+      "nonlinear": false
+    },
+    {
+      "scenario": "S2_shift",
+      "environment": "C",
+      "mu_u": 0.0,
+      "sigma_u": 2.0,
+      "sigma_x": 1.0,
+      "sigma_w": 0.0,
+      "nonlinear": false
+    },
+    {
+      "scenario": "S3_hidden",
+      "environment": "A",
+      "mu_u": 0.0,
+      "sigma_u": 1.0,
+      "sigma_x": 1.0,
+      "sigma_w": 0.0,
+      "nonlinear": false
+    },
+    {
+      "scenario": "S4_proxy",
+      "environment": "A",
+      "mu_u": 0.0,
+      "sigma_u": 1.0,
+      "sigma_x": 1.0,
+      "sigma_w": 0.0,
+      "nonlinear": false
+    },
+    {
+      "scenario": "S4_proxy",
+      "environment": "A",
+      "mu_u": 0.0,
+      "sigma_u": 1.0,
+      "sigma_x": 1.0,
+      "sigma_w": 0.5,
+      "nonlinear": false
+    },
+    {
+      "scenario": "S4_proxy",
+      "environment": "A",
+      "mu_u": 0.0,
+      "sigma_u": 1.0,
+      "sigma_x": 1.0,
+      "sigma_w": 1.5,
+      "nonlinear": false
+    },
+    {
+      "scenario": "S5_overlap",
+      "environment": "A",
+      "mu_u": 0.0,
+      "sigma_u": 1.0,
+      "sigma_x": 1.0,
+      "sigma_w": 0.0,
+      "nonlinear": false
+    },
+    {
+      "scenario": "S5_overlap",
+      "environment": "A",
+      "mu_u": 0.0,
+      "sigma_u": 1.0,
+      "sigma_x": 0.3,
+      "sigma_w": 0.0,
+      "nonlinear": false
+    },
+    {
+      "scenario": "S5_overlap",
+      "environment": "A",
+      "mu_u": 0.0,
+      "sigma_u": 1.0,
+      "sigma_x": 0.05,
+      "sigma_w": 0.0,
+      "nonlinear": false
+    }
+  ],
+  "note": "Oracle files are not learner training inputs."
+}

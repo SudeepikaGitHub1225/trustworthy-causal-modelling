@@ -1,0 +1,257 @@
+{
+  "study": "Synthetic causal machine benchmark V1 (JAX implementation)",
+  "random_backend": "jax.random; three independent split keys for observational U, epsilon_X, epsilon_Y",
+  "parameter_values": {
+    "speed_from_load": 0.8,
+    "speed_effect": 2.0,
+    "load_effect": 1.5,
+    "interaction": 0.5,
+    "speed_noise_sd": 1.0,
+    "outcome_noise_sd": 1.0
+  },
+  "environments": {
+    "A": {
+      "load_mean": 0.0,
+      "load_sd": 1.0
+    },
+    "B": {
+      "load_mean": 2.0,
+      "load_sd": 1.0
+    }
+  },
+  "independence": "U, epsilon_X, epsilon_Y generated independently",
+  "causal_graph_edges": [
+    [
+      "U",
+      "X"
+    ],
+    [
+      "U",
+      "Y"
+    ],
+    [
+      "X",
+      "Y"
+    ]
+  ],
+  "outcome_equation": "Y = 2 X + 1.5 U + 0.5 X U + epsilon_Y",
+  "speed_equation": "X = 0.8 U + epsilon_X",
+  "true_ite_0_to_1": "2 + 0.5 U",
+  "true_ate_0_to_1": {
+    "A": 2.0,
+    "B": 3.0
+  },
+  "observational_splits": [
+    {
+      "environment": "A",
+      "training_sample_size": 500,
+      "split": "train",
+      "rows": 500,
+      "seed": 20261026,
+      "observed_file": "env_A_n500_train_observed.csv",
+      "oracle_file": "env_A_n500_train_oracle.csv"
+    },
+    {
+      "environment": "A",
+      "training_sample_size": 500,
+      "split": "validation",
+      "rows": 200,
+      "seed": 20262026,
+      "observed_file": "env_A_n500_validation_observed.csv",
+      "oracle_file": "env_A_n500_validation_oracle.csv"
+    },
+    {
+      "environment": "A",
+      "training_sample_size": 500,
+      "split": "test",
+      "rows": 300,
+      "seed": 20263026,
+      "observed_file": "env_A_n500_test_observed.csv",
+      "oracle_file": "env_A_n500_test_oracle.csv"
+    },
+    {
+      "environment": "A",
+      "training_sample_size": 2000,
+      "split": "train",
+      "rows": 2000,
+      "seed": 20271026,
+      "observed_file": "env_A_n2000_train_observed.csv",
+      "oracle_file": "env_A_n2000_train_oracle.csv"
+    },
+    {
+      "environment": "A",
+      "training_sample_size": 2000,
+      "split": "validation",
+      "rows": 400,
+      "seed": 20272026,
+      "observed_file": "env_A_n2000_validation_observed.csv",
+      "oracle_file": "env_A_n2000_validation_oracle.csv"
+    },
+    {
+      "environment": "A",
+      "training_sample_size": 2000,
+      "split": "test",
+      "rows": 600,
+      "seed": 20273026,
+      "observed_file": "env_A_n2000_test_observed.csv",
+      "oracle_file": "env_A_n2000_test_oracle.csv"
+    },
+    {
+      "environment": "A",
+      "training_sample_size": 10000,
+      "split": "train",
+      "rows": 10000,
+      "seed": 20281026,
+      "observed_file": "env_A_n10000_train_observed.csv",
+      "oracle_file": "env_A_n10000_train_oracle.csv"
+    },
+    {
+      "environment": "A",
+      "training_sample_size": 10000,
+      "split": "validation",
+      "rows": 2000,
+      "seed": 20282026,
+      "observed_file": "env_A_n10000_validation_observed.csv",
+      "oracle_file": "env_A_n10000_validation_oracle.csv"
+    },
+    {
+      "environment": "A",
+      "training_sample_size": 10000,
+      "split": "test",
+      "rows": 3000,
+      "seed": 20283026,
+      "observed_file": "env_A_n10000_test_observed.csv",
+      "oracle_file": "env_A_n10000_test_oracle.csv"
+    },
+    {
+      "environment": "B",
+      "training_sample_size": 500,
+      "split": "train",
+      "rows": 500,
+      "seed": 20361026,
+      "observed_file": "env_B_n500_train_observed.csv",
+      "oracle_file": "env_B_n500_train_oracle.csv"
+    },
+    {
+      "environment": "B",
+      "training_sample_size": 500,
+      "split": "validation",
+      "rows": 200,
+      "seed": 20362026,
+      "observed_file": "env_B_n500_validation_observed.csv",
+      "oracle_file": "env_B_n500_validation_oracle.csv"
+    },
+    {
+      "environment": "B",
+      "training_sample_size": 500,
+      "split": "test",
+      "rows": 300,
+      "seed": 20363026,
+      "observed_file": "env_B_n500_test_observed.csv",
+      "oracle_file": "env_B_n500_test_oracle.csv"
+    },
+    {
+      "environment": "B",
+      "training_sample_size": 2000,
+      "split": "train",
+      "rows": 2000,
+      "seed": 20371026,
+      "observed_file": "env_B_n2000_train_observed.csv",
+      "oracle_file": "env_B_n2000_train_oracle.csv"
+    },
+    {
+      "environment": "B",
+      "training_sample_size": 2000,
+      "split": "validation",
+      "rows": 400,
+      "seed": 20372026,
+      "observed_file": "env_B_n2000_validation_observed.csv",
+      "oracle_file": "env_B_n2000_validation_oracle.csv"
+    },
+    {
+      "environment": "B",
+      "training_sample_size": 2000,
+      "split": "test",
+      "rows": 600,
+      "seed": 20373026,
+      "observed_file": "env_B_n2000_test_observed.csv",
+      "oracle_file": "env_B_n2000_test_oracle.csv"
+    },
+    {
+      "environment": "B",
+      "training_sample_size": 10000,
+      "split": "train",
+      "rows": 10000,
+      "seed": 20381026,
+      "observed_file": "env_B_n10000_train_observed.csv",
+      "oracle_file": "env_B_n10000_train_oracle.csv"
+    },
+    {
+      "environment": "B",
+      "training_sample_size": 10000,
+      "split": "validation",
+      "rows": 2000,
+      "seed": 20382026,
+      "observed_file": "env_B_n10000_validation_observed.csv",
+      "oracle_file": "env_B_n10000_validation_oracle.csv"
+    },
+    {
+      "environment": "B",
+      "training_sample_size": 10000,
+      "split": "test",
+      "rows": 3000,
+      "seed": 20383026,
+      "observed_file": "env_B_n10000_test_observed.csv",
+      "oracle_file": "env_B_n10000_test_oracle.csv"
+    }
+  ],
+  "intervention_tests": [
+    {
+      "environment": "A",
+      "do_x": 0.0,
+      "rows": 10000,
+      "seed": 20761026,
+      "file": "env_A_do_X_0_test.csv"
+    },
+    {
+      "environment": "A",
+      "do_x": 1.0,
+      "rows": 10000,
+      "seed": 20762026,
+      "file": "env_A_do_X_1_test.csv"
+    },
+    {
+      "environment": "B",
+      "do_x": 0.0,
+      "rows": 10000,
+      "seed": 20771026,
+      "file": "env_B_do_X_0_test.csv"
+    },
+    {
+      "environment": "B",
+      "do_x": 1.0,
+      "rows": 10000,
+      "seed": 20772026,
+      "file": "env_B_do_X_1_test.csv"
+    }
+  ],
+  "learner_columns": [
+    "U",
+    "X",
+    "Y"
+  ],
+  "oracle_only_columns": [
+    "epsilon_X",
+    "epsilon_Y",
+    "Y0",
+    "Y1",
+    "tau_true"
+  ],
+  "limitations": [
+    "Abstract standardized units",
+    "Observed confounder only",
+    "Simple polynomial mechanisms",
+    "Normal independent disturbances",
+    "Not real machine measurements"
+  ]
+}

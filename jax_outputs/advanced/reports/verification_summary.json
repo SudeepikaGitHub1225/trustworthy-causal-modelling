@@ -1,0 +1,7 @@
+{
+  "configurations": 12,
+  "dataset_pairs": 108,
+  "csv_files": 216,
+  "figures": 4,
+  "max_intervention_MC_abs_error": 0.03154040636036881
+}
