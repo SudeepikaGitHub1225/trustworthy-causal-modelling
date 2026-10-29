@@ -39,3 +39,5 @@ I compare ordinary regression, confounder-adjusted regression, interaction and n
 ## Bayesian analysis
 
 I fit Bayesian regression models and examine posterior ATE estimates, credible intervals, and interval coverage. I also compare what happens when workload is included or omitted from the model.
+
+
