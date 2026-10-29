@@ -26,6 +26,7 @@
   "number_model_config_results": 45,
   "identification_note": "Hidden confounder and noisy proxy effects not identifiable under given observed-data adjustment assumptions",
   "created_files": [
+    "causal_model_comparison_outputs\\experiment_metadata.json",
     "causal_model_comparison_outputs\\figures\\01_prediction_vs_causal_error.png",
     "causal_model_comparison_outputs\\figures\\02_sample_size_sensitivity.png",
     "causal_model_comparison_outputs\\figures\\03_cross_environment_ate.png",
@@ -40,6 +41,7 @@
     "causal_model_comparison_outputs\\reports\\environment_transport.csv",
     "causal_model_comparison_outputs\\reports\\jax_mlp_evaluation.csv",
     "causal_model_comparison_outputs\\reports\\model_comparison_all_scenarios.csv",
-    "causal_model_comparison_outputs\\reports\\sample_size_sensitivity.csv"
+    "causal_model_comparison_outputs\\reports\\sample_size_sensitivity.csv",
+    "causal_model_comparison_outputs\\reports\\scientific_summary.md"
   ]
 }
