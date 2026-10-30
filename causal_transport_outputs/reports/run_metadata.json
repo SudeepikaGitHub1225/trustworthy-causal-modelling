@@ -1,0 +1,41 @@
+{
+  "seed": 20261030,
+  "jax_version": "0.12.0.1",
+  "python": "3.12.3",
+  "train_source": "A",
+  "environments": {
+    "A": [
+      0.0,
+      1.0
+    ],
+    "B": [
+      2.0,
+      1.0
+    ],
+    "C": [
+      0.0,
+      2.0
+    ],
+    "D": [
+      3.0,
+      1.0
+    ]
+  },
+  "repeated_interval_experiments": 60,
+  "outputs": [
+    "causal_transport_outputs\\reports\\interval_summary.csv",
+    "causal_transport_outputs\\reports\\nonlinear_transport.csv",
+    "causal_transport_outputs\\reports\\proxy_sensitivity.csv",
+    "causal_transport_outputs\\reports\\repeated_intervals.csv",
+    "causal_transport_outputs\\reports\\transport_comparison.csv",
+    "causal_transport_outputs\\reports\\weight_stress.csv"
+  ],
+  "figures": [
+    "causal_transport_outputs\\figures\\cate_transport.png",
+    "causal_transport_outputs\\figures\\interval_coverage.png",
+    "causal_transport_outputs\\figures\\nonlinear_transport.png",
+    "causal_transport_outputs\\figures\\proxy_sensitivity.png",
+    "causal_transport_outputs\\figures\\transport_error.png",
+    "causal_transport_outputs\\figures\\weight_stability.png"
+  ]
+}
