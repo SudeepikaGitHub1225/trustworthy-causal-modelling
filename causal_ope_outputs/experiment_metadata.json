@@ -1,0 +1,25 @@
+{
+  "notebook": "05_causal_off_policy_evaluation_JAX.ipynb",
+  "seed": 20261107,
+  "sample_size": 1800,
+  "repetitions": 60,
+  "folds": 3,
+  "settings": [
+    "standard",
+    "weak_overlap",
+    "covariate_shift",
+    "hidden_confounding"
+  ],
+  "methods": [
+    "naive",
+    "dm",
+    "ipw",
+    "snipw",
+    "dr"
+  ],
+  "confidence_level": 0.95,
+  "jax_version": "0.12.0.1",
+  "numpy_version": "2.5.4",
+  "oracle_samples": 300000,
+  "study_type": "synthetic one-step contextual bandit"
+}
