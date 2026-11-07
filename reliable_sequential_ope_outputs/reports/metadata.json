@@ -1,0 +1,24 @@
+{
+  "seed": 20261107,
+  "horizon": 8,
+  "discount": 0.97,
+  "repetitions": 45,
+  "sizes": [
+    400,
+    1200
+  ],
+  "scenarios": [
+    "moderate overlap",
+    "near behavior",
+    "limited overlap"
+  ],
+  "estimators": [
+    "Direct",
+    "PDIS",
+    "DR"
+  ],
+  "interval": "episode-level normal approximation",
+  "ess_screen_threshold": 0.1,
+  "jax_version": "0.12.0.1",
+  "numpy_version": "2.5.4"
+}
