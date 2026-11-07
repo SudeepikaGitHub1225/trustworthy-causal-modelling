@@ -1,0 +1,4 @@
+scenario,pass_fraction,rmse_all,rmse_passed,coverage_passed,n_passed
+limited overlap,0.0,4.802714774335734,,,0.0
+moderate overlap,1.0,0.19561463061629855,0.19561463061629855,0.8857142857142857,35.0
+near behavior,1.0,0.15886392317833753,0.15886392317833753,1.0,35.0
