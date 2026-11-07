@@ -1,0 +1,32 @@
+{
+  "seed": 20261107,
+  "horizon": 8,
+  "discount": 0.97,
+  "states": 5,
+  "actions": 2,
+  "replications": 60,
+  "sample_sizes": [
+    400,
+    1200
+  ],
+  "scenarios": [
+    "standard",
+    "limited overlap",
+    "near behavior"
+  ],
+  "estimators": [
+    "Direct",
+    "PDIS",
+    "DR"
+  ],
+  "crossfit_folds": 2,
+  "interval": "episode-level normal approximation, 1.96 standard errors",
+  "limitations": [
+    "known behavior probabilities",
+    "fully observed state",
+    "finite horizon",
+    "normal approximation may undercover under extreme weight tails"
+  ],
+  "python": "3.12.3",
+  "jax": "0.12.0.1"
+}
